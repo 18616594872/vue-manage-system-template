@@ -1,5 +1,6 @@
 <template>
 	<div class="login-wrap">
+		<lang-select class="lang-select" />
 		<el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-container" autocomplete="off"
 			label-position="left">
 			<div class="title-container">
@@ -39,8 +40,13 @@
 	import {
 		UserModule
 	} from '@/store/module/user'
+	import LangSelect from '@/components/LangSelect/LangSelect.vue'
 
-	@Component({})
+	@Component({
+		components: {
+			LangSelect
+		}
+	})
 	export default class extends Vue {
 
 		loginForm: any = {
@@ -99,6 +105,14 @@
 		width: 100%;
 		overflow: hidden;
 		background: #0455ab;
+
+		.lang-select {
+			color: #fff;
+			font-size: 1rem;
+			position: absolute;
+			right: 10%;
+			top: 5%;
+		}
 
 		.login-container {
 			box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
