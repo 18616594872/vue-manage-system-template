@@ -20,17 +20,17 @@
         Vue
     } from 'vue-property-decorator'
     import {
-        commonModule
+        CommonModule
     } from '@/store/module/common'
     @Component({})
     export default class extends Vue {
         get language() {
-            return commonModule.language
+            return CommonModule.language
         }
 
         setLanguage(lang: string) {
             this.$i18n.locale = lang
-            commonModule.SetLanguage(lang)
+            CommonModule.SetLanguage(lang)
         }
     }
 </script>

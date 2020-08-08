@@ -6,7 +6,6 @@
 			<div class="title-container">
 				{{ $t('login.title') }}
 			</div>
-
 			<el-form-item prop="userName">
 				<svg class="icon icon-user" aria-hidden="true">
 					<use xlink:href="#iconuser"></use>
@@ -17,7 +16,7 @@
 
 			<el-form-item prop="passWord">
 				<svg class="icon icon-user" aria-hidden="true">
-					<use xlink:href="#iconlock"></use>
+					<use xlink:href="#iconlock"></use>	
 				</svg>
 				<el-input ref="passWord" v-model="loginForm.passWord" :placeholder="$t('login.password')"
 					name="password" autocomplete="off" />
@@ -48,7 +47,6 @@
 		}
 	})
 	export default class extends Vue {
-
 		loginForm: any = {
 			userName: 'admin',
 			passWord: '123456'

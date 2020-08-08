@@ -10,7 +10,6 @@ import '@/assets/font/svg-icon.js'
 
 import 'element-ui/lib/theme-chalk/index.css';
 
-Vue.use(ElementUI);
 Vue.use(ElementUI, {
     i18n: (key: string, value: string) => i18n.t(key, value)
 })

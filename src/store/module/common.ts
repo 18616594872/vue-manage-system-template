@@ -6,7 +6,9 @@ import {
     Action
 } from 'vuex-module-decorators'
 import store from '@/store'
-import { getLocale } from '@/lang'
+import {
+    getLocale
+} from '@/lang'
 
 export interface CommonState {
     leftTreeRouters: []
@@ -29,14 +31,14 @@ class Common extends VuexModule implements CommonState {
     }
 
     @Mutation
-    SET_LANGUAGE(language: string){
+    SET_LANGUAGE(language: string) {
         this.language = language
     }
 
     @Action
-    SetLanguage(language: string){
+    SetLanguage(language: string) {
         this.SET_LANGUAGE(language)
     }
 }
 
-export const commonModule = getModule(Common)
+export const CommonModule = getModule(Common)
